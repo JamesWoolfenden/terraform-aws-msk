@@ -29,16 +29,15 @@ module 'msk" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -46,26 +45,25 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                             | Type     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Name | Type |
+|------|------|
 | [aws_cloudwatch_log_group.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
-| [aws_kms_key.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key)                           | resource |
-| [aws_msk_cluster.examplea](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/msk_cluster)              | resource |
-| [aws_security_group.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group)             | resource |
+| [aws_kms_key.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
+| [aws_msk_cluster.examplea](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/msk_cluster) | resource |
+| [aws_security_group.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
 
 ## Inputs
 
-| Name                                                               | Description                                        | Type        | Default | Required |
-| ------------------------------------------------------------------ | -------------------------------------------------- | ----------- | ------- | :------: |
-| <a name="input_common_tags"></a> [common_tags](#input_common_tags) | This is to help you add tags to your cloud objects | `map(any)`  | n/a     |   yes    |
-| <a name="input_subnet_ids"></a> [subnet_ids](#input_subnet_ids)    | n/a                                                | `list(any)` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | n/a | `list(any)` | n/a | yes |
 
 ## Outputs
 
-| Name                                                     | Description |
-| -------------------------------------------------------- | ----------- |
-| <a name="output_cluster"></a> [cluster](#output_cluster) | n/a         |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_cluster"></a> [cluster](#output\_cluster) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Information
