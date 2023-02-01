@@ -1,3 +1,3 @@
 output "cluster" {
-  value = aws_msk_cluster.examplea
+  value = aws_msk_cluster.pike
 }
