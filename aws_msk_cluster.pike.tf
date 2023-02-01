@@ -4,7 +4,7 @@ resource "aws_msk_cluster" "pike" {
   number_of_broker_nodes = var.msk.number_of_broker_nodes
 
   broker_node_group_info {
-    instance_type   = var.instance_type
+    instance_type = var.instance_type
     storage_info {
       ebs_storage_info {
         volume_size = var.volume_size
@@ -20,7 +20,7 @@ resource "aws_msk_cluster" "pike" {
   }
   client_authentication {
     sasl {
-      scram=true
+      scram = true
     }
   }
   encryption_info {
@@ -32,7 +32,7 @@ resource "aws_msk_cluster" "pike" {
     }
   }
 
-open_monitoring {
+  open_monitoring {
     prometheus {
       jmx_exporter {
         enabled_in_broker = var.jmx_exporter
@@ -81,26 +81,26 @@ variable "msk" {
     kafka_version          = "2.4.1"
     number_of_broker_nodes = 3
   }
-} 
+}
 
 variable "volume_size" {
-  type = number
+  type        = number
   description = "Broker node disk size"
-  default=1000
+  default     = 1000
 }
 
 variable "public_access" {
-  type = string
+  type        = string
   description = "Broker node access"
-  default="DISABLED"
+  default     = "DISABLED"
 }
 
 variable "jmx_exporter" {
-  type=bool
+  type    = bool
   default = false
 }
 
- variable "node_exporter" {
-  type=bool
-  default=false
+variable "node_exporter" {
+  type    = bool
+  default = false
 }

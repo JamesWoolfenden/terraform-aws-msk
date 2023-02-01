@@ -7,5 +7,5 @@ resource "aws_msk_scram_secret_association" "pike" {
 variable "secret_arn_list" {
   type        = list(any)
   description = "secrets arns"
-  default=[]
+  default     = []
 }
