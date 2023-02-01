@@ -49,7 +49,8 @@ No modules.
 |------|------|
 | [aws_cloudwatch_log_group.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
 | [aws_kms_key.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
-| [aws_msk_cluster.examplea](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/msk_cluster) | resource |
+| [aws_msk_cluster.pike](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/msk_cluster) | resource |
+| [aws_msk_scram_secret_association.pike](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/msk_scram_secret_association) | resource |
 | [aws_security_group.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
 
 ## Inputs
@@ -57,7 +58,14 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
+| <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | Kafka instance type | `string` | `"kafka.t3.small"` | no |
+| <a name="input_jmx_exporter"></a> [jmx\_exporter](#input\_jmx\_exporter) | n/a | `bool` | `false` | no |
+| <a name="input_msk"></a> [msk](#input\_msk) | n/a | <pre>object({<br>    cluster_name           = string<br>    kafka_version          = string<br>    number_of_broker_nodes = number<br>  })</pre> | <pre>{<br>  "cluster_name": "examplea",<br>  "kafka_version": "2.4.1",<br>  "number_of_broker_nodes": 3<br>}</pre> | no |
+| <a name="input_node_exporter"></a> [node\_exporter](#input\_node\_exporter) | n/a | `bool` | `false` | no |
+| <a name="input_public_access"></a> [public\_access](#input\_public\_access) | Broker node access | `string` | `"DISABLED"` | no |
+| <a name="input_secret_arn_list"></a> [secret\_arn\_list](#input\_secret\_arn\_list) | secrets arns | `list(any)` | `[]` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | n/a | `list(any)` | n/a | yes |
+| <a name="input_volume_size"></a> [volume\_size](#input\_volume\_size) | Broker node disk size | `number` | `1000` | no |
 
 ## Outputs
 
