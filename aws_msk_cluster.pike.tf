@@ -53,23 +53,19 @@ resource "aws_msk_cluster" "pike" {
     }
   }
 }
-
 resource "aws_kms_key" "msk" {
+  # checkov:skip=CKV2_AWS_64: For example only, key policy managed via IAM
   enable_key_rotation = true
 }
-
-
 resource "aws_security_group" "msk" {
   name        = "msk"
   description = "Security group for the msk cluster"
 }
-
 variable "instance_type" {
   type        = string
   description = "Kafka instance type"
   default     = "kafka.t3.small"
 }
-
 variable "msk" {
   type = object({
     cluster_name           = string
@@ -82,24 +78,20 @@ variable "msk" {
     number_of_broker_nodes = 3
   }
 }
-
 variable "volume_size" {
   type        = number
   description = "Broker node disk size"
   default     = 1000
 }
-
 variable "public_access" {
   type        = string
   description = "Broker node access"
   default     = "DISABLED"
 }
-
 variable "jmx_exporter" {
   type    = bool
   default = false
 }
-
 variable "node_exporter" {
   type    = bool
   default = false
