@@ -58,6 +58,7 @@ resource "aws_kms_key" "msk" {
   enable_key_rotation = true
 }
 resource "aws_security_group" "msk" {
+  # checkov:skip=CKV_AWS_382: Unrestricted outbound access required for resource functionality
   name        = "msk"
   description = "Security group for the msk cluster"
 }

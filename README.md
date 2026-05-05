@@ -94,34 +94,6 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
-                "Kafka:BatchAssociateScramSecret",
-                "Kafka:BatchDisassociateScramSecret",
-                "Kafka:CreateCluster",
-                "Kafka:DeleteCluster",
-                "Kafka:DescribeCluster",
-                "Kafka:DescribeClusterOperation",
-                "Kafka:DescribeClusterV2",
-                "Kafka:GetBootstrapBrokers",
-                "Kafka:ListScramSecrets",
-                "Kafka:ListTagsForResource",
-                "Kafka:UpdateBrokerCount",
-                "Kafka:UpdateBrokerStorage",
-                "Kafka:UpdateBrokerType",
-                "Kafka:UpdateClusterConfiguration",
-                "Kafka:UpdateClusterKafkaVersion",
-                "Kafka:UpdateConnectivity",
-                "Kafka:UpdateMonitoring",
-                "Kafka:UpdateSecurity",
-                "Kafka:UpdateStorage"
-            ],
-            "Resource": [
-                "*"
-            ]
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": [
                 "ec2:CreateSecurityGroup",
                 "ec2:DeleteSecurityGroup",
                 "ec2:DeleteVpcEndpoints",
@@ -139,10 +111,38 @@ resource "aws_iam_policy" "terraform_pike" {
             ]
         },
         {
-            "Sid": "VisualEditor2",
+            "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": [
                 "iam:CreateServiceLinkedRole"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "kafka:BatchAssociateScramSecret",
+                "kafka:BatchDisassociateScramSecret",
+                "kafka:CreateCluster",
+                "kafka:DeleteCluster",
+                "kafka:DescribeCluster",
+                "kafka:DescribeClusterOperation",
+                "kafka:DescribeClusterV2",
+                "kafka:GetBootstrapBrokers",
+                "kafka:ListScramSecrets",
+                "kafka:ListTagsForResource",
+                "kafka:UpdateBrokerCount",
+                "kafka:UpdateBrokerStorage",
+                "kafka:UpdateBrokerType",
+                "kafka:UpdateClusterConfiguration",
+                "kafka:UpdateClusterKafkaVersion",
+                "kafka:UpdateConnectivity",
+                "kafka:UpdateMonitoring",
+                "kafka:UpdateSecurity",
+                "kafka:UpdateStorage"
             ],
             "Resource": [
                 "*"
@@ -175,6 +175,7 @@ resource "aws_iam_policy" "terraform_pike" {
                 "logs:DeleteRetentionPolicy",
                 "logs:DescribeLogGroups",
                 "logs:DisassociateKmsKey",
+                "logs:ListTagsForResource",
                 "logs:ListTagsLogGroup",
                 "logs:PutRetentionPolicy"
             ],
