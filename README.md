@@ -1,13 +1,11 @@
 # terraform-aws-msk
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-msk/workflows/Verify/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-msk)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-msk/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-msk)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-msk.svg)](https://github.com/JamesWoolfenden/terraform-aws-msk/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-msk.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-msk/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-msk/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-msk&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-msk/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-msk&benchmark=INFRASTRUCTURE+SECURITY)
 
 ---
 
@@ -36,7 +34,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -46,7 +44,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_cloudwatch_log_group.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
 | [aws_kms_key.msk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
 | [aws_msk_cluster.pike](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/msk_cluster) | resource |
@@ -56,11 +54,11 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | Kafka instance type | `string` | `"kafka.t3.small"` | no |
 | <a name="input_jmx_exporter"></a> [jmx\_exporter](#input\_jmx\_exporter) | n/a | `bool` | `false` | no |
-| <a name="input_msk"></a> [msk](#input\_msk) | n/a | <pre>object({<br>    cluster_name           = string<br>    kafka_version          = string<br>    number_of_broker_nodes = number<br>  })</pre> | <pre>{<br>  "cluster_name": "examplea",<br>  "kafka_version": "2.4.1",<br>  "number_of_broker_nodes": 3<br>}</pre> | no |
+| <a name="input_msk"></a> [msk](#input\_msk) | n/a | <pre>object({<br/>    cluster_name           = string<br/>    kafka_version          = string<br/>    number_of_broker_nodes = number<br/>  })</pre> | <pre>{<br/>  "cluster_name": "examplea",<br/>  "kafka_version": "2.4.1",<br/>  "number_of_broker_nodes": 3<br/>}</pre> | no |
 | <a name="input_node_exporter"></a> [node\_exporter](#input\_node\_exporter) | n/a | `bool` | `false` | no |
 | <a name="input_public_access"></a> [public\_access](#input\_public\_access) | Broker node access | `string` | `"DISABLED"` | no |
 | <a name="input_secret_arn_list"></a> [secret\_arn\_list](#input\_secret\_arn\_list) | secrets arns | `list(any)` | `[]` | no |
@@ -70,7 +68,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_cluster"></a> [cluster](#output\_cluster) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
